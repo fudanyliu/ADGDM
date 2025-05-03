@@ -9,9 +9,9 @@
 Welcome to the official repository for "Anomaly Detection and Generation with Diffusion Models: A Survey", submitted to [Journal](TBD).
 In this survey, we comprehensively review anomaly detection and generation with diffusion models (ADGDM), presenting a tutorial-style analysis of the theoretical foundations and practical implementations and spanning images, videos, time series, tabular, and multimodal data. Crucially, we reveal how DMs create a synergistic cycle where generation addresses data scarcity challenges while detection provides feedback for refined generation strategies, advancing both capabilities beyond their individual potential. A detailed taxonomy categorizes ADGDM methods based on anomaly scoring mechanisms, conditioning strategies, and architectural designs, analyzing their strengths and limitations. Key challenges, such as computational efficiency and the identity shortcut problem, are discussed alongside promising future directions, including efficient architectures, novel conditioning strategies, and integration with large AI models (e.g., LLMs). By synthesizing recent advancements and outlining open research questions, this survey aims to guide researchers and practitioners in leveraging DMs for innovative AD solutions across diverse applications.
 
-<img style="margin-bottom: -50px;" src="https://raw.githubusercontent.com/Siriussee/adgdm/main/assets/f1.svg">
+<img style="margin-bottom: -50px;" src="https://github.com/user-attachments/assets/8008325b-0316-4abf-a938-20703d64ddde">
 <!-- <b align="center" style="margin-top: -10px;">Taxonomy of diffusion models for anomaly detection</b> -->
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Taxonomy of diffusion models for anomaly detection</b></p>
+<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Publication and citation trends in anomaly-related research topic from 2021 to 2025</b></p>
 
 ✨ If you found this survey and repository useful, please consider to star this repository and cite our survey paper:
 
