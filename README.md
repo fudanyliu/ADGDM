@@ -5,18 +5,19 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Siriussee/adgdm) 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSiriussee%2Fadgdm&countColor=%23263759&style=flat-square)
 
+> Please change the badge url.
 
-Welcome to the official repository for "Anomaly Detection and Generation with Diffusion Models: A Survey", submitted to [Journal](TBD).
+Welcome to the official repository for "Anomaly Detection and Generation with Diffusion Models: A Survey", submitted to [TBD](TBD).
 In this survey, we comprehensively review anomaly detection and generation with diffusion models (ADGDM), presenting a tutorial-style analysis of the theoretical foundations and practical implementations and spanning images, videos, time series, tabular, and multimodal data. Crucially, we reveal how DMs create a synergistic cycle where generation addresses data scarcity challenges while detection provides feedback for refined generation strategies, advancing both capabilities beyond their individual potential. A detailed taxonomy categorizes ADGDM methods based on anomaly scoring mechanisms, conditioning strategies, and architectural designs, analyzing their strengths and limitations. Key challenges, such as computational efficiency and the identity shortcut problem, are discussed alongside promising future directions, including efficient architectures, novel conditioning strategies, and integration with large AI models (e.g., LLMs). By synthesizing recent advancements and outlining open research questions, this survey aims to guide researchers and practitioners in leveraging DMs for innovative AD solutions across diverse applications.
 
 <img style="margin-bottom: -50px;" src="https://github.com/user-attachments/assets/8008325b-0316-4abf-a938-20703d64ddde">
 <!-- <b align="center" style="margin-top: -10px;">Taxonomy of diffusion models for anomaly detection</b> -->
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Publication and citation trends in anomaly-related research topic from 2021 to 2025</b></p>
+<p align="center"><b align="center">Fig.1: Publication and citation trends in anomaly-related research topic from 2021 to 2025</b></p>
 
 ✨ If you found this survey and repository useful, please consider to star this repository and cite our survey paper:
 
 ```bib
-@misc{liu2025anomaly,
+@misc{TBD,
     title = {Anomaly Detection and Generation with Diffusion Models: A Survey},
     author = {Liu, Jing and Ma, Zhenchao and Wang, Zepu and Wang, and Zou, Chenxuanyin and Ren, Jiayang and Zehua and Liu, Yang and Song, Liang and Hu, Bo and Leung, Victor C. M.},
     year = {2025},
@@ -29,18 +30,32 @@ In this survey, we comprehensively review anomaly detection and generation with 
 ```
 
 ## Table of Contents
+<!-- no toc -->
 
-TBD
+- [ADGDM](#adgdm)
+  - [Table of Contents](#table-of-contents)
+  - [Recently AD Surveys](#recently-ad-surveys)
+  - [Image Anomaly Detection](#image-anomaly-detection)
+  - [Video Anomaly Detection](#video-anomaly-detection)
+  - [Time Series, Tabular, and Multimodal Anomaly Detection](#time-series-tabular-and-multimodal-anomaly-detection)
+    - [Time Series Anomaly Detection](#time-series-anomaly-detection)
+    - [Tabular Anomaly Detection](#tabular-anomaly-detection)
+    - [Multimodal Anomaly Detection](#multimodal-anomaly-detection)
+  - [Anomaly Generation](#anomaly-generation)
+  - [Performance Evaluation](#performance-evaluation)
+    - [Evaluation Metrics](#evaluation-metrics)
+    - [Public Datasets](#public-datasets)
+
 
 ## Recently AD Surveys
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Summary of our survey with recently AD surveys.</b></p>
+<p align="center"><b align="center">TABLE1: Summary of our survey with recently AD surveys.</b></p>
 
 | Paper Title                                                                                                                                         | Year | Main Focus                               | Domain Specific | Domain General | IAD  | VAD  | TSAD | TAD  | MAD  | AG   | DMs  | Dataset | Metric |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------|------|------------------------------------------|-----------------|----------------|------|------|------|------|------|------|------|---------|--------|
 | Anomaly Detection for IoT Time-Series Data: A Survey                                                                                                | 2020 | Time series AD in IoT                    | ✓               | -              | N/A  | N/A  | ●    | ○    | ○    | N/A  | ○    | ○       | ◐      |
 | Deep Learning for Anomaly Detection: A Review                                                                                                       | 2021 | General AD with DL                       | -               | ✓              | ●    | ◐    | ●    | ◐    | ◐    | ○    | ○    | ◐       | ◐      |
-| Deep Learning for Medical Anomaly Detection -- a Survey                                                                                             | 2022 | Medical AD                               | ✓               | -              | ●    | ○    | ◐    | ◐    | ○    | ○    | ○    | ○       | ●      |
+| Deep Learning for Medical Anomaly Detection - a Survey                                                                                             | 2022 | Medical AD                               | ✓               | -              | ●    | ○    | ◐    | ◐    | ○    | ○    | ○    | ○       | ●      |
 | A Survey of Single-Scene Video Anomaly Detection                                                                                                    | 2022 | Single-scene video AD                    | ✓               | -              | ○    | ●    | N/A  | N/A  | ○    | ○    | ○    | ●       | ●      |
 | Anomaly Detection in Surveillance Videos: A Thematic Taxonomy of Deep Models, Review and Performance Analysis                                        | 2023 | DL for surveillance VAD                  | ✓               | -              | ○    | ●    | ○    | ○    | ○    | ○    | ○    | ●       | ◐      |
 | A Comprehensive Survey on Graph Anomaly Detection with Deep Learning                                                                                 | 2023 | Graph AD with DL                         | -               | ✓              | ○    | ○    | ○    | ◐    | ◐    | ○    | ◐    | ●       | ●      |
@@ -51,11 +66,11 @@ TBD
 | Deep Learning for Time Series Anomaly Detection: A Survey                                                                                           | 2025 | Time series AD with DL                   | -               | ✓              | ○    | ○    | ●    | ◐    | ○    | ◐    | ○    | ●       | ●      |
 | Ours                                                                                                                                                  | 2025 | AD & AG with DM                          | -               | ✓              | ●    | ●    | ●    | ●    | ●    | ●    | ●    | ●       | ●      |
 
-Notes: Specifically, ○: "Not Covered", ◐: "Partially Covered", N/A: "Not applicable", and ●: "Fully Covered". The table highlights the main focus, domain specificity, and scope across various AD tasks, including image AD (IAD), video AD (VAD), time series AD (TSAD), tabular AD (TAD), multimodal AD (MAD), anomaly generation (AG), and diffusion models (DMs).
+> Notes: Specifically, ○: "Not Covered", ◐: "Partially Covered", N/A: "Not applicable", and ●: "Fully Covered". The table highlights the main focus, domain specificity, and scope across various AD tasks, including image AD (IAD), video AD (VAD), time series AD (TSAD), tabular AD (TAD), multimodal AD (MAD), anomaly generation (AG), and diffusion models (DMs).
 
 ## Image Anomaly Detection
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Summary of IAD methods across various imaging domains with implementations.</b></p>
+<p align="center"><b align="center">TABLE 2: Summary of IAD methods across various imaging domains with implementations.</b></p>
 
 | Paper Title                                                                                                           | Year | Venue    | Imaging Domains              | DM  | Code                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------|------|----------|------------------------------|-----|-------------------------------------------------------------------------------------------------------|
@@ -78,7 +93,7 @@ Notes: Specifically, ○: "Not Covered", ◐: "Partially Covered", N/A: "Not app
 | Image-Conditioned Diffusion Models for Medical Anomaly Detection                                                       | 2025 | USMLMI   | Medical imaging              | ✓   | [Link](https://github.com/matt-baugh/img-cond-diffusion-model-ad)                                     |
 
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Performance comparison of key IAD methods on VisA and BTAD datasets.</b></p>
+<p align="center"><b align="center">TABLE 3: Performance comparison of key IAD methods on VisA and BTAD datasets.</b></p>
 
 | Paper Title                                                                                                                     | Year | Venue  | VisA (I-AUROC)  | BTAD (PRO)    |
 |---------------------------------------------------------------------------------------------------------------------------------|------|--------|-----------------|---------------|
@@ -93,7 +108,7 @@ Notes: Specifically, ○: "Not Covered", ◐: "Partially Covered", N/A: "Not app
 
 ## Video Anomaly Detection
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Summary of VAD methods across various domains.</b></p>
+<p align="center"><b align="center">TABLE 4: Summary of VAD methods across various domains.</b></p>
 
 | Paper Title                                                                                                                          | Year | Venue           | Type   | Domain                                      | DM      |
 |--------------------------------------------------------------------------------------------------------------------------------------|------|-----------------|--------|---------------------------------------------|---------|
@@ -118,18 +133,18 @@ Notes: Specifically, ○: "Not Covered", ◐: "Partially Covered", N/A: "Not app
 
 Notes: "Type" refers to Learning Paradigm: F = Frame-level, S = Sequence-level, M = Motion Modeling, C = Conditioning Strategies.
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Performance (AUC) comparison of key VAD methods on UCSD Ped2, CUHK Avenue, and ShanghaiTech.</b></p>
+<p align="center"><b align="center">TABLE 5: Performance (AUC) comparison of key VAD methods on UCSD Ped2, CUHK Avenue, and ShanghaiTech.</b></p>
 
 | Paper Title                                                                                                                          | Year | Venue                      | UCSD Ped2 | CUHK Avenue | ShanghaiTech |
 |--------------------------------------------------------------------------------------------------------------------------------------|------|----------------------------|-----------|-------------|--------------|
 | Weakly-Supervised Video Anomaly Detection with Robust Temporal Feature Magnitude Learning                                             | 2021 | ICCV                       | 96.3      | 85.1        | 73           |
 | Diversity-Measurable Anomaly Detection                                                                                                | 2023 | CVPR                       | 99.7      | 92.8        | 78.8         |
-| Learnable Locality-Sensitive Hashing for Video Anomaly Detection                                                                       | 2023 | IEEE Trans. Circuits Syst. Video Technol. | 91.3      | 87.4        | 77.6         |
-| Boosting Variational Inference with Margin Learning for Few-Shot Scene-Adaptive Anomaly Detection                                        | 2023 | IEEE Trans. Circuits Syst. Video Technol. | -         | 87.3        | 75.2         |
+| Learnable Locality-Sensitive Hashing for Video Anomaly Detection                                                                       | 2023 | IEEE TCSVT | 91.3      | 87.4        | 77.6         |
+| Boosting Variational Inference with Margin Learning for Few-Shot Scene-Adaptive Anomaly Detection                                        | 2023 | IEEE TCSVT | -         | 87.3        | 75.2         |
 | Unbiased Multiple Instance Learning for Weakly Supervised Video Anomaly Detection                                                      | 2023 | CVPR                       | -         | 88.3        | -            |
 | Dual Memory Units with Uncertainty Regulation for Weakly Supervised Video Anomaly Detection                                              | 2023 | AAAI                       | -         | 88.9        | 97.92        |
-| VADiffusion: Compressed Domain Information Guided Conditional Diffusion for Video Anomaly Detection                                      | 2024 | IEEE Trans. Circuits Syst. Video Technol. | 98.2      | 87.2        | 71.7         |
-| PLOVAD: Prompting Vision-Language Models for Open Vocabulary Video Anomaly Detection                                                     | 2025 | IEEE Trans. Circuits Syst. Video Technol. | -         | -           | 97.98        |
+| VADiffusion: Compressed Domain Information Guided Conditional Diffusion for Video Anomaly Detection                                      | 2024 | IEEE TCSVT | 98.2      | 87.2        | 71.7         |
+| PLOVAD: Prompting Vision-Language Models for Open Vocabulary Video Anomaly Detection                                                     | 2025 | IEEE TCSVT | -         | -           | 97.98        |
 
 Notes: "Performance (AUC) scores are reported on UCSD Ped2, CUHK Avenue, and ShanghaiTech datasets."
 
@@ -138,8 +153,9 @@ Notes: "Performance (AUC) scores are reported on UCSD Ped2, CUHK Avenue, and Sha
 ### Time Series Anomaly Detection
 
 ![Image](https://github.com/user-attachments/assets/3a2ee11e-ead0-453f-a90c-1d3fe48085fb)
+<p align="center"><b align="center">Fig. 6: TSAD with reconstruction and imputation paths.</b></p>
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Summary of TSAD with learning paradigms</b></p>
+<p align="center"><b align="center">TABLE 6: Summary of TSAD with learning paradigms</b></p>
 
 | Paper Title                                                                                                                                                 | Year | Venue                                                             | Learning Paradigm                   | DM   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------|------|-------------------------------------------------------------------|-------------------------------------|------|
@@ -160,7 +176,7 @@ Notes: "Performance (AUC) scores are reported on UCSD Ped2, CUHK Avenue, and Sha
 | ProDiffAD: Progressively Distilled Diffusion Models for Multivariate Time Series Anomaly Detection in JointCloud Environment                                        | 2024 | IJCNN                                                             | Progressive distillation            | ✓    |
 | Contaminated Multivariate Time-Series Anomaly Detection with Spatio-Temporal Graph Conditional Diffusion Models                                                 | 2024 | ArXiv                                                             | Graph conditional diffusion         | ✓    |
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Performance comparison of key TSAD methods on SWaT, WADI, MSL, and SMD datasets.</b></p>
+<p align="center"><b align="center">TABLE 7: Performance comparison of key TSAD methods on SWaT, WADI, MSL, and SMD datasets.</b></p>
 
 | Paper Title                                                                                                                                                 | Year | Venue    | SWaT (P, R, F1, F1_PA)          | WADI (P, R, F1, F1_PA)          | MSL (P, R, F1, F1_PA)           | SMD (P, R, F1, F1_PA)           |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------|------|----------|---------------------------------|--------------------------------|---------------------------------|--------------------------------|
@@ -178,9 +194,9 @@ Notes: P, R, F1, and F1_PA refer to Precision, Recall, F1-score, and Point-Adjus
 ### Tabular Anomaly Detection
 
 ![Image](https://github.com/user-attachments/assets/bab762e5-ec5d-4b57-ab49-4acc873a02dc)
+<p align="center"><b align="center">Fig. 7: TAD handling mixed data types.</b></p>
 
-
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Summary of TAD methods with type and metrics</b></p>
+<p align="center"><b align="center">TABLE 8: Summary of TAD methods with type and metrics</b></p>
 
 | Paper Title                                                                                                              | Year | Venue     | Type                                | Performance Metrics                   | DM   |
 |--------------------------------------------------------------------------------------------------------------------------|------|-----------|-------------------------------------|---------------------------------------|------|
@@ -195,7 +211,7 @@ Notes: P, R, F1, and F1_PA refer to Precision, Recall, F1-score, and Point-Adjus
 | Prototype-Oriented Hypergraph Representation Learning for Anomaly Detection in Tabular Data                                | 2025 | IPM       | Hypergraph representation           | Detection accuracy                    | ✓    |
 | Retrieval Augmented Deep Anomaly Detection for Tabular Data                                                              | 2024 | CIKM      | Retrieval-augmented                 | Detection performance                 | ✕    |
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Performance comparison of key TAD models on 47 real-world tabular datasets, including domains such as healthcare, image processing, and finance.</b></p>
+<p align="center"><b align="center">TABLE 9: Performance comparison of key TAD models on 47 real-world tabular datasets, including domains such as healthcare, image processing, and finance.</b></p>
 
 | Paper Title                                                                                                                         | Year | Venue            | AUC (%) ± Std. Dev.    | Mean Rank | p-value  |
 |-------------------------------------------------------------------------------------------------------------------------------------|------|------------------|------------------------|-----------|----------|
@@ -211,7 +227,7 @@ Notes: AUC (%) denotes the average area under the ROC curve over 47 datasets; Me
 
 ### Multimodal Anomaly Detection
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Summary of MAD methods on different datasets.</b></p>
+<p align="center"><b align="center">TABLE 10: Summary of MAD methods on different datasets.</b></p>
 
 | Paper Title                                                                                                                               | Year | Venue   | Datasets                                     | DM  | Code                                                   |
 |-------------------------------------------------------------------------------------------------------------------------------------------|------|---------|----------------------------------------------|-----|--------------------------------------------------------|
@@ -224,7 +240,7 @@ Notes: AUC (%) denotes the average area under the ROC curve over 47 datasets; Me
 
 ## Anomaly Generation
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Summary of AG methods across various domains with implementations</b></p>
+<p align="center"><b align="center">TABLE 11: Summary of AG methods across various domains with implementations</b></p>
 
 | Paper Title                                                                                                                           | Year | Venue   | Domain                                   | DM  | Code                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------|------|---------|------------------------------------------|-----|--------------------------------------------------------|
@@ -241,7 +257,7 @@ Notes: AUC (%) denotes the average area under the ROC curve over 47 datasets; Me
 | FinDiff: Diffusion Models for Financial Tabular Data Generation                                                                        | 2023 | ACM ICAIF | Financial data                          | ✓   | -                                                      |
 | NetDiffus: Network Traffic Generation by Diffusion Models through Time-Series Imaging                                                   | 2023 | Arxiv   | Network traffic analysis                 | ✓   | -                                                      |
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Performance comparison of key AG models on the MVTec dataset using IS and IC-LPIPS metrics.</b></p>
+<p align="center"><b align="center">TABLE 12: Performance comparison of key AG models on the MVTec dataset using IS and IC-LPIPS metrics.</b></p>
 
 | Paper Title                                                                                                                        | Year | Venue   | IS ↑  | IC-L ↑ |
 |------------------------------------------------------------------------------------------------------------------------------------|------|---------|-------|--------|
@@ -260,10 +276,11 @@ Notes: IS denotes Inception Score and IC-L denotes Inception-based LPIPS; higher
 
 ### Evaluation Metrics
 ![Image](https://github.com/user-attachments/assets/c4ac692b-aedc-46ce-8226-6dc241a32e61)
+<p align="center"><b align="center">Fig. 11: Comprehensive evaluation metrics for ADGDM across different data modalities.</b></p>
 
 ### Public Datasets
 
-<p align="center" style="margin-top: -10px;"><b align="center" style="margin-top: -10px;">Summary of benchmark datasets for IAD, TSAD, TAD, and VAD across industrial, medical, surveillance, and cybersecurity domains.</b></p>
+<p align="center"><b align="center">TABLE 13: Summary of benchmark datasets for IAD, TSAD, TAD, and VAD across industrial, medical, surveillance, and cybersecurity domains.</b></p>
 
 | Paper Title                                                                                                                             | Task | Year | Venue       | Real/Synth. | #Samples      | #Subjects | Domain                             | HomePage                                                                                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------|------|------|-------------|-------------|---------------|-----------|------------------------------------|------------------------------------------------------------------------------------------------------------------------|
