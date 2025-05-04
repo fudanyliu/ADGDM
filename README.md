@@ -152,7 +152,7 @@ Notes: "Performance (AUC) scores are reported on UCSD Ped2, CUHK Avenue, and Sha
 
 ### Time Series Anomaly Detection
 
-![Image](https://github.com/user-attachments/assets/3a2ee11e-ead0-453f-a90c-1d3fe48085fb)
+<p align="center"> <img src="https://github.com/user-attachments/assets/3a2ee11e-ead0-453f-a90c-1d3fe48085fb" alt=""> </p>
 <p align="center"><b align="center">Fig. 6: TSAD with reconstruction and imputation paths.</b></p>
 
 <p align="center"><b align="center">TABLE 6: Summary of TSAD with learning paradigms</b></p>
@@ -193,7 +193,7 @@ Notes: P, R, F1, and F1_PA refer to Precision, Recall, F1-score, and Point-Adjus
 
 ### Tabular Anomaly Detection
 
-![Image](https://github.com/user-attachments/assets/bab762e5-ec5d-4b57-ab49-4acc873a02dc)
+<p align="center"> <img src="https://github.com/user-attachments/assets/bab762e5-ec5d-4b57-ab49-4acc873a02d" alt=""> </p>
 <p align="center"><b align="center">Fig. 7: TAD handling mixed data types.</b></p>
 
 <p align="center"><b align="center">TABLE 8: Summary of TAD methods with type and metrics</b></p>
@@ -275,7 +275,8 @@ Notes: IS denotes Inception Score and IC-L denotes Inception-based LPIPS; higher
 ## Performance Evaluation
 
 ### Evaluation Metrics
-![Image](https://github.com/user-attachments/assets/c4ac692b-aedc-46ce-8226-6dc241a32e61)
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/c4ac692b-aedc-46ce-8226-6dc241a32e61" alt=""> </p>
 <p align="center"><b align="center">Fig. 11: Comprehensive evaluation metrics for ADGDM across different data modalities.</b></p>
 
 ### Public Datasets
