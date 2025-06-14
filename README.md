@@ -1,11 +1,11 @@
-# [ADGDM](TBD)
+# [Anomaly Detection and Generation with Diffusion Models: A Survey](https://arxiv.org/pdf/2506.09368.pdf)
 
 <a href="https://arxiv.org/pdf/2506.09368.pdf" alt="paper"><img src="https://img.shields.io/badge/ArXiv-2506.09368-FAA41F.svg?style=flat" /></a>
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Siriussee/adgdm) 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Siriussee/adgdm) 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSiriussee%2Fadgdm&countColor=%23263759&style=flat-square)
 
-Welcome to the official repository for "Anomaly Detection and Generation with Diffusion Models: A Survey", submitted to [IEEE TPAMI](https://arxiv.org/pdf/2506.09368). In this survey, we comprehensively review anomaly detection and generation with diffusion models (ADGDM), presenting a tutorial-style analysis of the theoretical foundations and practical implementations and spanning images, videos, time series, tabular, and multimodal data. Crucially, we reveal how DMs create a synergistic cycle where generation addresses data scarcity challenges while detection provides feedback for refined generation strategies, advancing both capabilities beyond their individual potential. A detailed taxonomy categorizes ADGDM methods based on anomaly scoring mechanisms, conditioning strategies, and architectural designs, analyzing their strengths and limitations. Key challenges, such as computational efficiency and the identity shortcut problem, are discussed alongside promising future directions, including efficient architectures, novel conditioning strategies, and integration with large AI models (e.g., LLMs). By synthesizing recent advancements and outlining open research questions, this survey aims to guide researchers and practitioners in leveraging DMs for innovative AD solutions across diverse applications.
+Welcome to the official repository for "Anomaly Detection and Generation with Diffusion Models: A Survey", submitted to [IEEE TPAMI](https://arxiv.org/pdf/2506.09368). In this survey, we comprehensively review anomaly detection and generation with diffusion models (ADGDM), presenting a tutorial-style analysis of the theoretical foundations and practical implementations and spanning images, videos, time series, tabular, and multimodal data. Crucially, we reveal how DMs create a synergistic cycle where generation addresses data scarcity challenges while detection provides feedback for refined generation strategies, advancing both capabilities beyond their individual potential. A detailed taxonomy categorizes ADGDM methods based on anomaly scoring mechanisms, conditioning strategies, and architectural designs, analyzing their strengths and limitations. We final discuss key challenges including scalability and computational efficiency, and outline promising future directions such as efficient architectures, conditioning strategies, and integration with foundation models (e.g., visual-language models and large language models). By synthesizing recent advances and outlining open research questions, this survey aims to guide researchers and practitioners in leveraging DMs for innovative AD solutions across diverse applications.
 
 <img style="margin-bottom: -50px;" src="https://github.com/user-attachments/assets/8008325b-0316-4abf-a938-20703d64ddde">
 <!-- <b align="center" style="margin-top: -10px;">Taxonomy of diffusion models for anomaly detection</b> -->
@@ -32,19 +32,16 @@ Welcome to the official repository for "Anomaly Detection and Generation with Di
 ## Table of Contents
 <!-- no toc -->
 
-- [ADGDM](#adgdm)
-  - [Table of Contents](#table-of-contents)
-  - [Recently AD Surveys](#recently-ad-surveys)
-  - [Image Anomaly Detection](#image-anomaly-detection)
-  - [Video Anomaly Detection](#video-anomaly-detection)
-  - [Time Series, Tabular, and Multimodal Anomaly Detection](#time-series-tabular-and-multimodal-anomaly-detection)
-    - [Time Series Anomaly Detection](#time-series-anomaly-detection)
-    - [Tabular Anomaly Detection](#tabular-anomaly-detection)
-    - [Multimodal Anomaly Detection](#multimodal-anomaly-detection)
-  - [Anomaly Generation](#anomaly-generation)
-  - [Performance Evaluation](#performance-evaluation)
-    - [Evaluation Metrics](#evaluation-metrics)
-    - [Public Datasets](#public-datasets)
+* [Recently AD Surveys](#recently-ad-surveys)
+* [Image Anomaly Detection](#image-anomaly-detection)
+* [Video Anomaly Detection](#video-anomaly-detection)
+* [Time Series Anomaly Detection](#time-series-anomaly-detection)
+* [Tabular Anomaly Detection](#tabular-anomaly-detection)
+* [Multimodal Anomaly Detection](#multimodal-anomaly-detection)
+* [Anomaly Generation](#anomaly-generation)
+* [Performance Evaluation](#performance-evaluation)
+  * [Evaluation Metrics](#evaluation-metrics)
+  * [Public Datasets](#public-datasets)
 
 
 ## Recently AD Surveys
@@ -148,9 +145,7 @@ Notes: "Type" refers to Learning Paradigm: F = Frame-level, S = Sequence-level, 
 
 Notes: "Performance (AUC) scores are reported on UCSD Ped2, CUHK Avenue, and ShanghaiTech datasets."
 
-## Time Series, Tabular, and Multimodal Anomaly Detection
-
-### Time Series Anomaly Detection
+## Time Series Anomaly Detection
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/3a2ee11e-ead0-453f-a90c-1d3fe48085fb" alt=""> </p>
 <p align="center"><b align="center">Fig. 6: TSAD with reconstruction and imputation paths.</b></p>
@@ -191,7 +186,7 @@ Notes: "Performance (AUC) scores are reported on UCSD Ped2, CUHK Avenue, and Sha
 
 Notes: P, R, F1, and F1_PA refer to Precision, Recall, F1-score, and Point-Adjusted F1-score respectively.
 
-### Tabular Anomaly Detection
+## Tabular Anomaly Detection
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/bab762e5-ec5d-4b57-ab49-4acc873a02d" alt=""> </p>
 <p align="center"><b align="center">Fig. 7: TAD handling mixed data types.</b></p>
@@ -225,7 +220,7 @@ Notes: P, R, F1, and F1_PA refer to Precision, Recall, F1-score, and Point-Adjus
 
 Notes: AUC (%) denotes the average area under the ROC curve over 47 datasets; Mean Rank is the average ranking position of the method; p-value indicates the statistical significance.
 
-### Multimodal Anomaly Detection
+## Multimodal Anomaly Detection
 
 <p align="center"><b align="center">TABLE 10: Summary of MAD methods on different datasets.</b></p>
 
