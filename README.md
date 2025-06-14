@@ -1,32 +1,32 @@
 # [ADGDM](TBD)
 
-<a href="https://arxiv.org/pdf/2501.11430.pdf" alt="paper"><img src="https://img.shields.io/badge/ArXiv-2501.11430-FAA41F.svg?style=flat" /></a>
+<a href="https://arxiv.org/pdf/2506.09368.pdf" alt="paper"><img src="https://img.shields.io/badge/ArXiv-2506.09368-FAA41F.svg?style=flat" /></a>
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Siriussee/adgdm) 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Siriussee/adgdm) 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSiriussee%2Fadgdm&countColor=%23263759&style=flat-square)
 
-> Please change the badge url.
-
-Welcome to the official repository for "Anomaly Detection and Generation with Diffusion Models: A Survey", submitted to [TBD](TBD).
-In this survey, we comprehensively review anomaly detection and generation with diffusion models (ADGDM), presenting a tutorial-style analysis of the theoretical foundations and practical implementations and spanning images, videos, time series, tabular, and multimodal data. Crucially, we reveal how DMs create a synergistic cycle where generation addresses data scarcity challenges while detection provides feedback for refined generation strategies, advancing both capabilities beyond their individual potential. A detailed taxonomy categorizes ADGDM methods based on anomaly scoring mechanisms, conditioning strategies, and architectural designs, analyzing their strengths and limitations. Key challenges, such as computational efficiency and the identity shortcut problem, are discussed alongside promising future directions, including efficient architectures, novel conditioning strategies, and integration with large AI models (e.g., LLMs). By synthesizing recent advancements and outlining open research questions, this survey aims to guide researchers and practitioners in leveraging DMs for innovative AD solutions across diverse applications.
+Welcome to the official repository for "Anomaly Detection and Generation with Diffusion Models: A Survey", submitted to [IEEE TPAMI](https://arxiv.org/pdf/2506.09368). In this survey, we comprehensively review anomaly detection and generation with diffusion models (ADGDM), presenting a tutorial-style analysis of the theoretical foundations and practical implementations and spanning images, videos, time series, tabular, and multimodal data. Crucially, we reveal how DMs create a synergistic cycle where generation addresses data scarcity challenges while detection provides feedback for refined generation strategies, advancing both capabilities beyond their individual potential. A detailed taxonomy categorizes ADGDM methods based on anomaly scoring mechanisms, conditioning strategies, and architectural designs, analyzing their strengths and limitations. Key challenges, such as computational efficiency and the identity shortcut problem, are discussed alongside promising future directions, including efficient architectures, novel conditioning strategies, and integration with large AI models (e.g., LLMs). By synthesizing recent advancements and outlining open research questions, this survey aims to guide researchers and practitioners in leveraging DMs for innovative AD solutions across diverse applications.
 
 <img style="margin-bottom: -50px;" src="https://github.com/user-attachments/assets/8008325b-0316-4abf-a938-20703d64ddde">
 <!-- <b align="center" style="margin-top: -10px;">Taxonomy of diffusion models for anomaly detection</b> -->
+
 <p align="center"><b align="center">Fig.1: Publication and citation trends in anomaly-related research topic from 2021 to 2025</b></p>
 
 ✨ If you found this survey and repository useful, please consider to star this repository and cite our survey paper:
 
 ```bib
-@misc{TBD,
-    title = {Anomaly Detection and Generation with Diffusion Models: A Survey},
-    author = {Liu, Jing and Ma, Zhenchao and Wang, Zepu and Wang, and Zou, Chenxuanyin and Ren, Jiayang and Zehua and Liu, Yang and Song, Liang and Hu, Bo and Leung, Victor C. M.},
-    year = {2025},
-    month = jan,
-    number = {arXiv:2501.11430},
-    eprint = {2501.11430},
-    primaryclass = {cs},
-    doi = {10.48550/arXiv.2501.11430},
+@misc{liu2025anomaly,
+  title = {Anomaly Detection and Generation with Diffusion Models: A Survey},
+  shorttitle = {Anomaly Detection and Generation with Diffusion Models},
+  author = {Liu, Yang and Liu, Jing and Li, Chengfang and Xi, Rui and Li, Wenchao and Cao, Liang and Wang, Jin and Yang, Laurence T. and Yuan, Junsong and Zhou, Wei},
+  year = {2025},
+  month = jun,
+  number = {arXiv:2506.09368},
+  eprint = {2506.09368},
+  primaryclass = {cs},
+  doi = {10.48550/arXiv.2506.09368}
 }
+
 ```
 
 ## Table of Contents
