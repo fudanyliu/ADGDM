@@ -1,4 +1,4 @@
-# [Anomaly Detection and Generation with Diffusion Models: A Survey](./main_bios.pdf)
+# [Anomaly Detection and Generation with Diffusion Models: A Survey](./main.pdf)
 
 <a href="https://arxiv.org/pdf/2506.09368.pdf" alt="paper"><img src="https://img.shields.io/badge/ArXiv-2506.09368-FAA41F.svg?style=flat" /></a>
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Siriussee/adgdm) 
